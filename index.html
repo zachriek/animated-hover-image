@@ -1,115 +1,21 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Animated Hover Image</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background: #262626;
-}
-
-.container {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 100px 0;
-	-webkit-box-reflect: below 1px linear-gradient(transparent, transparent, transparent, #0004);
-}
-
-.container .box {
-	position: relative;
-	width: 320px;
-	height: 400px;
-	background: #444;
-	margin: 0 20px;
-	border-radius: 20px;
-	background: linear-gradient(45deg, #2da2ff 25%, #444 25%, #444 50%, #2da2ff 50%, #2da2ff 75%, #444 75%, #444 100%);
-	background-size: 40px 40px;
-	filter: grayscale(1);
-	animation: animateBg .5s linear infinite;
-	animation-play-state: paused;
-	transition: filter 1s;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.container .box:nth-child(2) {
-	background: linear-gradient(135deg, #ff61ae 25%, #444 25%, #444 50%, #ff61ae 50%, #ff61ae 75%, #444 75%, #444 100%);
-	background-size: 40px 40px;
-}
-
-.container .box:hover {
-	filter: grayscale(0);
-	animation-play-state: running;
-}
-
-@keyframes animateBg {
-	0% {
-		background-position: 0;
-	}
-
-	100% {
-		background-position: 40px;
-	}
-}
-
-.container .box img {
-	position: absolute;
-	bottom: 0;
-	height: 90%;
-	transition: height .5s;
-}
-
-.container .box:hover img {
-	height: 480px;
-}
-
-@media (max-width: 768px) {
-	.container .box {
-		width: 240px;
-		height: 300px;
-	}
-
-	.container .box:hover img {
-		height: 370px;
-	}
-}
-
-@media (max-width: 576px) {
-	.container .box {
-		width: 160px;
-		height: 200px;
-	}
-
-	.container .box:hover img {
-		height: 260px;
-	}
-}
-
-@media (max-width: 450px) {
-	.container .box {
-		width: 120px;
-		height: 150px;
-	}
-
-	.container .box:hover img {
-		height: 200px;
-	}
-}
-
-@media (max-width: 350px) {
-	.container .box {
-		width: 80px;
-		height: 100px;
-	}
-
-	.container .box:hover img {
-		height: 140px;
-	}
-}
+	<div class="container">
+		<div class="box">
+			<img src="img/img1.png" alt="Image">
+		</div>
+		<div class="box">
+			<img src="img/img2.png" alt="Image">
+		</div>
+	</div>
+	
+</body>
+</html>
